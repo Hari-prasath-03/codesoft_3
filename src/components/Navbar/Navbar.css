@@ -1,0 +1,24 @@
+@tailwind components;
+
+.nav-links {
+  @apply relative text-white hover:text-blue-500 hover:scale-110 transition-all;
+}
+
+.nav-links::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links.under::after {
+  width: 100%;
+  background-color: #fff;
+}
+
+.nav-links:hover::after {
+  background-color: #3B82F6;
+}
